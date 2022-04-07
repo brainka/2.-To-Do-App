@@ -84,21 +84,17 @@ function markItemAsCompleted(e) {
 function deleteTask() {
 	//iterate through the completed list whic holds the ticked list items and remove from the page
 
-	if (completedList.length > 0) {
-		alert('Are you sure you want to delete?');
-	} else {
-		completedList.forEach((listItem) => {
-			let element = document.getElementById(listItem);
-			element.remove();
-		});
+	completedList.forEach((listItem) => {
+		let element = document.getElementById(listItem);
+		element.remove();
+	});
 
-		//clear out the array with the ticked items
-		function clearListArray() {
-			completedList.forEach((listItem) => {
-				completedList.shift();
-			});
-		}
-		//reset the the completed list array to empty after removing the to do items from the page
-		return (completedList = []);
+	//clear out the array with the ticked items
+	function clearListArray() {
+		completedList.forEach((listItem) => {
+			completedList.shift();
+		});
 	}
+	//reset the the completed list array to empty after removing the to do items from the page
+	return (completedList = []);
 }
