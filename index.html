@@ -5,6 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap"
+			rel="stylesheet"
+		/>
 		<title>To Do List</title>
 	</head>
 	<body>
@@ -12,8 +18,9 @@
 			<h1>To Do List</h1>
 			<div>
 				<input id="taskText" placeholder="Add a task" type="text" />
-				<button onclick="getToDoListItem()">Add</button>
-				<div id="todos"></div>
+				<button id="add-button" onclick="addListItem()">Add</button>
+				<button id="delete-button" onclick="deleteTask()">Delete</button>
+				<div class="todos" id="todos"></div>
 			</div>
 		</div>
 
